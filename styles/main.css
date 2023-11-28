@@ -154,4 +154,16 @@ nav .logo img{
         left: 2rem;
         width: unset;
     }
+
+    .icons{
+        gap: 3rem;
+    }
+
+    .hamburger i{
+        font-size: 2rem;
+    }
+
+    .login a{
+        font-size: 2rem;
+    }
 }
