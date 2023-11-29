@@ -5,7 +5,7 @@
     --nav: #252525;
 }
 
-
+/* global */
 
 *{
     margin: 0;
@@ -194,7 +194,8 @@ main .main-btn-container{
     justify-content: center;
 }
 
-main .main-btn-container button{
+main .main-btn-container a{
+    cursor: pointer;
     background: var(--nav);
     border: solid 2px var(--orange);
     padding: .375em 1.125em;
