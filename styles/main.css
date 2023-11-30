@@ -20,6 +20,30 @@ a{
     text-decoration: none;
 }
 
+#orange_gradient{
+    animation: background-pan 1s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--dark_orange),
+        var(--orange),
+        var(--dark_orange)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    font-weight: bold;
+}
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+    
+    to {
+        background-position: -200% center;
+    }
+}
+
 
 /* header */
 
@@ -30,12 +54,10 @@ header{
     background-color: var(--nav);
     overflow: hidden;
     z-index: 1030;
-}
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav{
@@ -154,7 +176,7 @@ nav .pages a:hover{
 main .video video{
     z-index: -1;
     position: absolute;
-    opacity: 0.3;
+    opacity: 0.2;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -200,7 +222,7 @@ main .main-btn-container a{
     background: var(--nav);
     border: solid 2px var(--orange);
     padding: .375em 1.125em;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .main-btn{
@@ -241,7 +263,9 @@ main .main-btn-container a{
     border-bottom-right-radius: var(--radius);
 }
 
-
+.contact-container{
+    height: 100vh;
+}
 
 
 
@@ -292,13 +316,26 @@ main .main-btn-container a{
     .dropdown{
         display: block;
     }
+
+    .main-txt{
+        font-size: 0.9rem;
+    }
+
+    .main-btn{
+        font-size: 0.9rem;
+    }
+
+    main .main-btn-container a{
+        padding: .200em 1em;
+        font-size: 1.5rem;
+    }
 }
 
 @media(max-width: 576px){
     .dropdown{
         left: 2rem;
         width: unset;
-    }
+    }   
 
     .icons{
         gap: 3rem;
@@ -310,5 +347,18 @@ main .main-btn-container a{
 
     .login a{
         font-size: 2rem;
+    }
+
+    .main-txt{
+        width: 80%;
+    }
+
+    .main-btn{
+        font-size: 0.7rem;
+    }
+
+    main .main-btn-container a{
+        padding: .100em 1em;
+        font-size: 1.5rem;
     }
 }

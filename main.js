@@ -20,16 +20,6 @@ hamburgerIcon.onclick = function() {
     }
 };
 
-
-// navigation function
-window.onscroll = function(){
-    if (window.scrollY >= sticky) {
-        navbar.classList.add("sticky");
-    } else {
-        navbar.classList.remove("sticky");
-    }
-}
-
 // show hidden password
 const showPass = (loginPass, loginEye) =>{
     const input = document.getElementById(loginPass),
