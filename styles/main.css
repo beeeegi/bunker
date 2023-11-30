@@ -21,7 +21,7 @@ a{
 }
 
 #orange_gradient{
-    animation: background-pan 1s linear infinite;
+    animation: background-pan 2s linear infinite;
     background: linear-gradient(
         to right,
         var(--dark_orange),
