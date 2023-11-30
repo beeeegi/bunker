@@ -14,7 +14,7 @@
 }
 body{
     height: 100vh;
-    background-color: var(--gray);
+    background-color: orange;
 }
 a{
     text-decoration: none;
@@ -122,7 +122,7 @@ nav .pages a:hover{
 
 /* background */
 
-main .bg img{
+main .video video{
     z-index: -1;
     position: absolute;
     bottom: 0;
@@ -154,7 +154,7 @@ main{
     margin-inline: 1.5rem;
     padding: 2.5rem 1.5rem;
     border-radius: 1rem;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     display: grid;
 
     width: 600px;
@@ -272,7 +272,7 @@ main{
     color: var(--orange);
 }
 
-.asd{
+.btn{
     margin: 0 auto;
 }
 
@@ -331,6 +331,7 @@ main{
 /* responsive */
 @media(max-width: 992px){
     /* medium display */
+    
     .icons{
         position: inherit;
         height: 60px;
@@ -380,5 +381,9 @@ main{
 
     .login-container h1{
         font-size: 2rem;
+    }
+
+    main{
+        padding-top: 4.5rem;
     }
 }
