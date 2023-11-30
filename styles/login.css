@@ -14,7 +14,7 @@
 }
 body{
     height: 100vh;
-    background-color: orange;
+    background-color: var(--gray);
 }
 a{
     text-decoration: none;
