@@ -113,6 +113,7 @@ nav .pages a:hover{
 
 .icons{
     display: none;
+    align-items: center;
 }
 
 /* dropdown */
@@ -178,7 +179,7 @@ main .main-txt{
 
 main .main-txt h1{
     padding-bottom: 3rem;
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--orange);
     font-family: 'Armalite Rifle', sans-serif;
 }

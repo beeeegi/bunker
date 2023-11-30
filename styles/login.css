@@ -60,10 +60,6 @@ nav .hamburger{
     display: none;
 }
 
-nav .login a{
-    color: var(--orange);
-}
-
 nav .logo img{
     max-width: 60px;
 }
@@ -85,6 +81,7 @@ nav .pages a:hover{
 
 .icons{
     display: none;
+    align-items: center;
 }
 
 /* dropdown */
@@ -115,15 +112,19 @@ nav .pages a:hover{
 }
 
 .dropdown.open{
-    height: 140px;
+    height: 190px;
 }
 
-/* video */
+.dropdown .hazard{
+    color: var(--orange);
+    font-weight: bold;
+}
 
-main .video video{
+/* background */
+
+main .bg img{
     z-index: -1;
     position: absolute;
-    opacity: 0.3;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -134,76 +135,169 @@ main .video video{
 /* main */
 
 main{
-    padding-top: 100px;
+    padding-top: 12rem;
     color: white;
 }
 
-main .login-container{
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background: rgba(255,255,255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
-    padding: 15rem;
-    overflow: hidden;
+.login-container input, .login-container button{
+    border: none;
+    outline: none;
 }
 
-/* main .main-btn-container{
-    margin-top: 3rem;
+.login-container a{
+    text-decoration: none;
+}
+
+.login-container form{
+    background-color: hsla(0, 0%, 10%, .1);
+    border: 2px solid var(--orange);
+    margin-inline: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    display: grid;
+
+    width: 600px;
+    margin: 0 auto;
+}
+
+.login-container h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+}
+
+.login-container .content,
+.login-container .content .box{
+    display: grid;
+}
+
+.login-container .content{
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-container .box{
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .75rem;
+    border-bottom: 2px solid var(--orange);
+}
+
+.login-container .box i{
+    font-size: 1.25rem;
+}
+
+.login-container .box input{
+    width: 100%;
+    padding-block: .8rem;
+    background: none;
+    color: var(--orange);
+    position: relative;
+    z-index: 1;
+}
+
+.login-container .box-input{
+    position: relative;
+}
+
+.login-container .box label{
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-weight: bold;
+
+    transition: top .3s, font-size .3s;
+}
+
+.login-container .box-input i{
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.login-container .box:nth-child(2) input{
+    padding-right: 1.8rem;
+}
+
+.login-container .check,
+.login-container .check .check-group{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-main .main-btn-container a{
+.login-container .check{
+    margin-bottom: 1.5rem;
+}
+
+.login-container .check label,
+.login-container .check a,
+.login-container .register{
+    font-size: small;
+}
+
+.login-container .check-group{
+    column-gap: .5rem;
+}
+
+.login-container .check input{
+    width: 16px;
+    height: 16px;
+}
+
+.login-container .check a{
+    margin-left: 15px;
+    color: var(--orange);
+}
+
+.login-container .check a:hover{
+    text-decoration: underline;
+}
+
+.login-container button{
+    width: 200px;
+    height: auto;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--nav);
+    font-weight: bold;
     cursor: pointer;
-    background: var(--nav);
-    border: solid 2px var(--orange);
-    padding: .375em 1.125em;
-    font-size: 2rem;
+    margin-bottom: 2rem;
+    align-self: center;
+
+    color: var(--orange);
 }
 
-.main-btn{
-    font-size: 1rem;
-    background: var(--nav);
-    color:  var(--orange);
-    
-    box-shadow: 0 0px 0px orange;
-    transform: translateY(0);
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    
-    --dur: .1s;
-    --delay: .1s;
-    --radius: 16px;
-    
-    transition:
-        border-top-left-radius var(--dur) var(--delay) ease-out,
-        border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
-        border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
-        border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
-        box-shadow calc(var(--dur) * 4) ease-out,
-        transform calc(var(--dur) * 4) ease-out,
-        background calc(var(--dur) * 4) steps(4, jump-end);
+.asd{
+    margin: 0 auto;
 }
 
-.main-btn:hover,
-.main-btn:focus {
-    box-shadow: 0 4px 8px rgba(244, 145, 4, 0.2);;
-    transform: translateY(-4px);
-    background: var(--orange);
-    color: var(--nav);
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
-    border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
-} */
+.login-container .register{
+    text-align: center;
+}
+
+.login-container .register a{
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.login-container .register a:hover{
+   text-decoration: underline;
+}
+
+.input:focus + .input-label{
+    top: -12px;
+    font-size: small;
+}
+
+.input:not(:placeholder-shown).input:not(:focus) + .input-label{
+    top: -12px;
+    font-size: small;
+}
 
 
 
@@ -236,6 +330,7 @@ main .main-btn-container a{
 
 /* responsive */
 @media(max-width: 992px){
+    /* medium display */
     .icons{
         position: inherit;
         height: 60px;
@@ -245,13 +340,11 @@ main .main-btn-container a{
         gap: 6rem;
     }
     
-    nav .pages,
-    nav .account{
+    nav .pages{
         display: none;
     }
 
-    nav .hamburger,
-    nav .login{
+    nav .hamburger{
         display: block;
     }
 
@@ -261,6 +354,7 @@ main .main-btn-container a{
 }
 
 @media(max-width: 576px){
+    /* mostly phones */
     .dropdown{
         left: 2rem;
         width: unset;
@@ -274,7 +368,17 @@ main .main-btn-container a{
         font-size: 2rem;
     }
 
-    .login a{
+    .login-container{
+        justify-content: center;
+    }
+
+    .login-container form{
+        width: 90% !important; 
+        padding: 4rem 3rem 3.5rem !important;
+        border-radius: 1.5rem !important;
+    }
+
+    .login-container h1{
         font-size: 2rem;
     }
 }
