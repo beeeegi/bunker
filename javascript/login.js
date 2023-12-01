@@ -10,5 +10,4 @@ const showPass = (loginPass, loginEye) => {
         iconEye.classList.toggle('ri-eye-off-line', input.type === 'password');
     });
 };
-
 showPass('pass', 'eye');

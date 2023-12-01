@@ -66,6 +66,7 @@ nav .logo img{
 
 nav .pages a{
     color: white;
+    text-decoration: none;
     transition: scale 0.5s ease;
     font-family: 'Armalite Rifle', sans-serif;
 }
@@ -135,7 +136,7 @@ main .video video{
 /* main */
 
 main{
-    padding-top: 12rem;
+    padding-top: 10rem;
     color: white;
 }
 
@@ -163,7 +164,7 @@ main{
 
 .login-container h1{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bolder;
     margin-bottom: 2rem;
 }
@@ -263,13 +264,13 @@ main{
     height: auto;
     padding: 1rem;
     border-radius: .5rem;
-    background-color: var(--nav);
+    background-color: var(--orange);
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 2rem;
     align-self: center;
 
-    color: var(--orange);
+    color: var(--nav);
 }
 
 .btn{
@@ -352,6 +353,21 @@ main{
     .dropdown{
         display: block;
     }
+
+    .login-container h1{
+        font-size: 2rem;
+    }
+
+    main{
+        padding-top: 9rem;
+    }
+
+    .login-container form{
+        width: 90% !important; 
+        padding: 4rem 3rem 3.5rem !important;
+        border-radius: 1.5rem !important;
+    }
+
 }
 
 @media(max-width: 576px){
@@ -389,7 +405,30 @@ main{
 }
 
 @media(max-height: 700px){
+    /* mostly phones */
     main{
         padding-top: 2.5rem;
+    }
+}
+
+@media(max-height: 640px){
+    /* mostly OLD phones */
+    main{
+        padding-top: 0.5rem;
+    }
+}
+
+@media(max-height: 600px){
+    /* mostly OLD phones */
+    main{
+        padding-top: 0.5rem;
+    }
+
+    .login-container form{
+        padding: 2rem 1em 1.5rem !important;
+    }
+
+    .login-container h1{
+        font-size: 1.5rem;
     }
 }
