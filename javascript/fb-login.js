@@ -5,6 +5,10 @@ window.fbAsyncInit = function() {
         version: 'v18.0'
     });
 
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+
     console.log("fbasyncinit function is running")
 };
 
