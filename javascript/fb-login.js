@@ -22,22 +22,7 @@ window.fbAsyncInit = function() {
     console.log("strange function is running")
 }(document, 'script', 'facebook-jssdk'));
 
-function reloadFacebookSDK() {
-    var existingScript = document.getElementById('facebook-jssdk');
-    if (existingScript) {
-        existingScript.parentNode.removeChild(existingScript);
-    }
-
-    var js = document.createElement('script');
-    js.id = 'facebook-jssdk';
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    document.getElementsByTagName('head')[0].appendChild(js);
-
-    console.log("reloadfacebooksdk function is running")
-}
-
 function startFacebookLogin() {
-    reloadFacebookSDK();
 
     FB.login(function(response) {
         console.log("login response " + response)
