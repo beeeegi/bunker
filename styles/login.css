@@ -141,7 +141,7 @@ main{
 }
 
 
-.login-container form{
+.login-container #login{
     background-color: hsla(0, 0%, 10%, .1);
     border: 2px solid var(--orange);
     margin-inline: 1.5rem;
@@ -247,7 +247,7 @@ main{
         padding-top: 9rem;
     }
 
-    .login-container form{
+    .login-container #login{
         width: 90% !important; 
         padding: 4rem 3rem 3.5rem !important;
         border-radius: 1.5rem !important;
@@ -274,7 +274,7 @@ main{
         justify-content: center;
     }
 
-    .login-container form{
+    .login-container #login{
         width: 90% !important; 
         padding: 4rem 3rem 3.5rem !important;
         border-radius: 1.5rem !important;
@@ -309,7 +309,7 @@ main{
         padding-top: 0.5rem;
     }
 
-    .login-container form{
+    .login-container #login{
         padding: 2rem 1em 1.5rem !important;
     }
 
