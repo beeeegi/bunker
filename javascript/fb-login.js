@@ -6,14 +6,25 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-
 window.fbAsyncInit = function() {
     FB.init({
-        appId            : '1092461288577137',
-        xfbml            : true,
-        version          : '18.0'
+        appId: '1092461288577137',
+        xfbml: true,
+        version: 'v18.0'
     });
 };
+
+function reloadFacebookSDK() {
+    var existingScript = document.getElementById('facebook-jssdk');
+    if (existingScript) {
+        existingScript.parentNode.removeChild(existingScript);
+    }
+
+    var js = document.createElement('script');
+    js.id = 'facebook-jssdk';
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    document.getElementsByTagName('head')[0].appendChild(js);
+}
 
 function startFacebookLogin() {
     reloadFacebookSDK();
@@ -29,19 +40,6 @@ function startFacebookLogin() {
     });
 }
 
-function reloadFacebookSDK() {
-    var existingScript = document.getElementById('facebook-jssdk');
-    if (existingScript) {
-        existingScript.parentNode.removeChild(existingScript);
-    }
-
-    var js = document.createElement('script');
-    js.id = 'facebook-jssdk';
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    document.getElementsByTagName('head')[0].appendChild(js);
-}
-
-
 function startFacebookLogout() {
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
@@ -49,7 +47,7 @@ function startFacebookLogout() {
                 document.getElementById("profile").innerHTML = "You are now logged out";
             });
         } else {
-            document.getElementById("profile").innerHTML = "you are not logged in";
+            document.getElementById("profile").innerHTML = "You are not logged in";
         }
     });
 }
