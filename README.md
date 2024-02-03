@@ -1,5 +1,7 @@
-# How to register
+# nvm dropped it xd
 
-# How to host a game
+## How to register
 
-# Rules
+## How to host a game
+
+## Rules
